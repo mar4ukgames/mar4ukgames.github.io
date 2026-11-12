@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Colors Lie — a brain game where the colors lie</title>
+<meta name="description" content="Colors Lie is a free reaction and focus game for Android. Tap the right color before time runs out — but the words lie, the buttons swap places and your brain tries to trick you.">
+<meta property="og:title" content="Colors Lie">
+<meta property="og:description" content="The colors are lying to you. How far can you get?">
+<meta property="og:image" content="https://mar4uk.github.io/img/1_game.webp">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&family=Noto+Sans:wght@400;600&display=swap">
+<style>
+:root {
+  --bg: #0f1117;
+  --surface: #181c26;
+  --line: #2a3040;
+  --fg: #eef1f7;
+  --muted: #9aa3b5;
+  --red: #e53935;
+  --green: #43a047;
+  --blue: #1e88e5;
+  --yellow: #fdd835;
+  --display: "Nunito", system-ui, sans-serif;
+  --body: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+a { color: var(--blue); }
+.band { display: flex; height: 6px; }
+.band span { flex: 1; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+.hero { text-align: center; padding: 48px 0 32px; }
+.hero img.logo { width: min(440px, 86%); height: auto; }
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(30px, 6vw, 46px);
+  line-height: 1.15;
+  margin: 18px 0 10px;
+  letter-spacing: -0.01em;
+}
+.hero h1 .lie { color: var(--blue); }
+.hero p.lead { color: var(--muted); max-width: 620px; margin: 0 auto 26px; font-size: 18px; }
+.cta {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--green); color: #fff; text-decoration: none;
+  font-family: var(--display); font-weight: 900; font-size: 20px;
+  padding: 16px 30px; border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(67, 160, 71, 0.35);
+}
+.cta:hover { filter: brightness(1.08); }
+.cta svg { width: 26px; height: 26px; }
+.note { color: var(--muted); font-size: 14px; margin-top: 12px; }
+
+.shots {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  margin: 26px 0 44px;
+}
+.shots img { width: 100%; height: auto; border-radius: 18px; display: block; border: 1px solid var(--line); }
+
+h2 { font-family: var(--display); font-weight: 900; font-size: 28px; margin: 0 0 16px; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 44px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 20px;
+  border-top: 5px solid var(--c, var(--blue));
+}
+.card h3 { font-family: var(--display); font-weight: 800; font-size: 19px; margin: 0 0 6px; }
+.card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+.lang { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px; margin-bottom: 44px; }
+.lang h2 { font-size: 24px; }
+.lang p { margin: 0 0 8px; color: var(--muted); }
+
+footer { border-top: 1px solid var(--line); padding: 26px 0 40px; color: var(--muted); font-size: 15px; }
+footer .links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-bottom: 8px; }
+
+@media (max-width: 760px) {
+  .shots { grid-template-columns: repeat(2, 1fr); }
+  .features { grid-template-columns: 1fr; }
+  .hero { padding-top: 32px; }
+}
+</style>
+</head>
+<body>
+<div class="band"><span style="background:var(--red)"></span><span style="background:var(--green)"></span><span style="background:var(--blue)"></span><span style="background:var(--yellow)"></span></div>
+
+<main class="wrap">
+  <section class="hero">
+    <img class="logo" src="img/logo.webp" alt="Colors Lie" width="1006" height="495">
+    <h1>Tap the right color.<br>But the <span class="lie">colors lie</span>.</h1>
+    <p class="lead">A fast, free brain game for Android. Words lie, buttons swap places, and the rules change every round. How long can you trust your eyes?</p>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.marchuk.colorslie">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3.2v17.6c0 .5.5.8 1 .6l9.6-9.4L5 2.6c-.5-.2-1 .1-1 .6Zm11.7 7.6 2.6-2.5-10-5.7 7.4 8.2Zm0 2.4-7.4 8.2 10-5.7-2.6-2.5Zm3.8-3.2-2.9 2.8 2.9 2.8 2.2-1.3c.8-.5.8-1.6 0-2.1l-2.2-1.2Z"/></svg>
+      Get it on Google Play
+    </a>
+    <div class="note">Free · Optional ads only for an extra life · Works offline</div>
+  </section>
+
+  <div class="shots">
+    <img src="img/1_game.webp" alt="Gameplay: the buttons are labeled with the wrong colors" width="540" height="960" loading="lazy">
+    <img src="img/2_neon.webp" alt="Neon theme with a tricky task" width="540" height="960" loading="lazy">
+    <img src="img/3_hardcore.webp" alt="Hardcore mode with one life" width="540" height="960" loading="lazy">
+    <img src="img/5_shop.webp" alt="Theme shop" width="540" height="960" loading="lazy">
+  </div>
+
+  <h2>Why it fools your brain</h2>
+  <div class="features">
+    <div class="card" style="--c:var(--red)"><h3>Stroop effect</h3><p>Your brain reads words before it sees colors, so a red button that says “BLUE” slows you down.</p></div>
+    <div class="card" style="--c:var(--green)"><h3>Go / No-Go</h3><p>After three “tap yellow”, a sudden “don't tap yellow” is surprisingly hard to obey.</p></div>
+    <div class="card" style="--c:var(--blue)"><h3>Task switching</h3><p>Colors, numbers, sizes, voice traps — every rule change costs you a split second.</p></div>
+    <div class="card" style="--c:var(--yellow)"><h3>Modes</h3><p>Classic, Hardcore with one life, and a Daily Challenge with the same tasks for everyone.</p></div>
+    <div class="card" style="--c:var(--red)"><h3>Challenge a friend</h3><p>Send a code — your friend plays the exact same tasks and tries to beat your score.</p></div>
+    <div class="card" style="--c:var(--green)"><h3>Rewards</h3><p>Daily quests, a 7-day login reward, achievements, leaderboards and a shop full of themes.</p></div>
+  </div>
+
+  <section class="lang" lang="uk">
+    <h2>Українською</h2>
+    <p><b>Colors Lie</b> — безкоштовна гра на увагу й швидкість реакції. Натисни правильний колір, поки не скінчився час. Але підписи на кнопках брешуть, кнопки міняються місцями, а правила змінюються щораунду.</p>
+    <p>Звичайна гра, хардкор, щоденний виклик, виклик другу, завдання дня, досягнення й магазин тем. Гра підтримує 8 мов.</p>
+  </section>
+
+  <footer>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy / Політика конфіденційності</a>
+      <a href="https://play.google.com/store/apps/details?id=com.marchuk.colorslie">Google Play</a>
+      <a href="mailto:marchuk951@gmail.com">marchuk951@gmail.com</a>
+    </div>
+    <div>© 2026 Colors Lie</div>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="img/favicon.png">
+<title>Colors Lie Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Noto+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: one readable column, game's four colors as a thin signature band; EN and UK versions stacked with a language switch. */
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --fg: #171a24;
+  --muted: #5a6072;
+  --line: #dfe2ec;
+  --accent: #1565c0;
+  --red: #e53935;
+  --green: #43a047;
+  --blue: #1e88e5;
+  --yellow: #fdd835;
+  --font-display: "Nunito", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --font-body: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11131a; --surface: #181b25; --fg: #e8ebf3; --muted: #9aa1b4; --line: #2a2f3d; --accent: #64b5f6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11131a; --surface: #181b25; --fg: #e8ebf3; --muted: #9aa1b4; --line: #2a2f3d; --accent: #64b5f6;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+.band { display: grid; grid-template-columns: repeat(4, 1fr); height: 6px; margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))) calc(-1 * max(16px, env(safe-area-inset-right, 0px))); }
+.band span:nth-child(1) { background: var(--red); }
+.band span:nth-child(2) { background: var(--green); }
+.band span:nth-child(3) { background: var(--blue); }
+.band span:nth-child(4) { background: var(--yellow); }
+
+.wrap { max-width: 44rem; margin: 0 auto; }
+header { padding-block: 40px 8px; display: flex; flex-direction: column; gap: 10px; }
+.app { font-family: var(--font-display); font-weight: 900; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(2rem, 6vw, 2.75rem); line-height: 1.1; margin: 0; text-wrap: balance; }
+.meta { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+nav.lang { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+nav.lang a {
+  font-family: var(--font-display); font-weight: 800; font-size: 0.9rem;
+  color: var(--fg); text-decoration: none;
+  border: 1.5px solid var(--line); border-radius: 999px; padding: 4px 14px;
+}
+nav.lang a:hover, nav.lang a:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+
+.summary {
+  margin-top: 28px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; padding: 18px 20px;
+}
+.summary p { margin: 0; }
+
+section.policy { padding-top: 40px; }
+section.policy + section.policy { border-top: 1px solid var(--line); margin-top: 48px; }
+h2 { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; line-height: 1.25; margin: 32px 0 8px; text-wrap: balance; }
+h2.lang-title { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-top: 0; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 6px; }
+a { color: var(--accent); }
+strong { font-weight: 600; }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; margin: 8px 0 14px; }
+.table-scroll { overflow-x: auto; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+th { font-family: var(--font-display); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.04em; color: var(--muted); }
+
+.contact { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 4px; }
+.email {
+  font-weight: 600; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 12px; user-select: all; overflow-wrap: anywhere;
+}
+button.copy {
+  font: 800 0.85rem var(--font-display); color: var(--fg); background: transparent;
+  border: 1.5px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer;
+}
+button.copy:hover, button.copy:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+</style>
+</head>
+<body>
+<div class="band" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+<div class="wrap">
+  <header>
+    <div class="app">Colors Lie · com.marchuk.colorslie</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: October 20, 2026</p>
+    <nav class="lang" aria-label="Language">
+      <a href="#en">English</a>
+      <a href="#uk">Українська</a>
+    </nav>
+  </header>
+
+  <!-- ENGLISH -->
+  <section class="policy" id="en" lang="en">
+    <div class="summary">
+      <p><strong>In short:</strong> the developer of Colors Lie does not collect, store or sell your personal data. Your scores and settings stay on your phone. Ads (Google AdMob) and, where available, Google Play Games are provided by Google, which processes some data under its own privacy policy.</p>
+    </div>
+
+    <h2>Who we are</h2>
+    <p>Colors Lie (the "game") is a mobile reaction game published on Google Play under the package name com.marchuk.colorslie by an independent developer ("we", "us"). For any privacy question, contact us at the address in the Contact section below.</p>
+
+    <h2>Data stored on your device</h2>
+    <p>The game saves the following only in its private storage on your phone. It is never sent to us.</p>
+    <ul>
+      <li>Game statistics: best score, last score, best combo, games played, total correct answers.</li>
+      <li>Daily challenge result for the current day.</li>
+      <li>Settings: language, sound, vibration and colorblind mode.</li>
+    </ul>
+    <p>You can clear statistics in Settings → Reset statistics. Uninstalling the game deletes all of this data.</p>
+
+    <h2>Advertising (Google AdMob)</h2>
+    <p>The game shows only optional rewarded video ads: you choose to watch a video to get an extra life. There are no banners or pop-up ads. Ads are delivered by Google AdMob, which automatically collects and shares the following data for advertising, analytics and fraud prevention:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Data</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>Device identifiers</td><td>Android advertising ID, app set ID</td></tr>
+          <tr><td>Approximate location</td><td>Estimated from your IP address</td></tr>
+          <tr><td>Interactions with ads</td><td>Ad views, taps, video completion</td></tr>
+          <tr><td>Diagnostics</td><td>App and SDK performance data</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>This data is encrypted in transit. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from apps that use its services</a>.</p>
+
+    <h2>Your consent for personalized ads</h2>
+    <p>If you are in the European Economic Area, the United Kingdom or Switzerland, the game asks for your consent before personalized ads are shown, using Google's consent form. If you decline, Google may still show non-personalized ads. You can change your choice at any time in the game: Settings → Ad privacy. You can also reset or delete your advertising ID in your phone's Android settings (Settings → Privacy → Ads).</p>
+
+    <h2>Google Play Games</h2>
+    <p>Where Google Play Games features (leaderboards) are available and you sign in, Google processes your Play Games profile name, avatar and the scores you submit, and shows them on leaderboards according to your profile visibility settings. You can manage your profile in the Google Play Games app. We do not receive your email address or contacts.</p>
+
+    <h2>Children</h2>
+    <p>The game is not directed at children under 13, and we do not knowingly collect data from them.</p>
+
+    <h2>Retention and deletion</h2>
+    <p>We do not hold any of your data on our servers, so there is nothing for us to delete. Data on your device is removed when you uninstall the game. For data processed by Google, use your Google Account settings or Google's tools linked above.</p>
+
+    <h2>Your rights</h2>
+    <p>Depending on where you live (for example, under the EU General Data Protection Regulation), you may have the right to access, correct, delete or restrict the processing of your personal data, and to withdraw consent. Because we do not store your data, these requests are handled through the settings above or directly with Google. You may also complain to your local data protection authority.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, we will update the effective date at the top of this page. The current version is always available at this address.</p>
+
+    <h2>Contact</h2>
+    <div class="contact">
+      <span class="email" id="email-en">marchuk951@gmail.com</span>
+      <button class="copy" type="button" id="copy-en" data-target="email-en">Copy</button>
+    </div>
+  </section>
+
+  <!-- UKRAINIAN -->
+  <section class="policy" id="uk" lang="uk">
+    <h2 class="lang-title">Українська версія</h2>
+    <div class="summary">
+      <p><strong>Коротко:</strong> розробник Colors Lie не збирає, не зберігає і не продає ваші персональні дані. Ваші рахунки й налаштування залишаються на телефоні. Рекламу (Google AdMob) і, де вони доступні, Google Play Ігри надає Google, який обробляє частину даних згідно з власною політикою конфіденційності.</p>
+    </div>
+
+    <h2>Хто ми</h2>
+    <p>Colors Lie («гра») — мобільна гра на реакцію, опублікована в Google Play під назвою пакета com.marchuk.colorslie незалежним розробником («ми»). З питань конфіденційності пишіть на адресу з розділу «Контакти» нижче.</p>
+
+    <h2>Дані, що зберігаються на пристрої</h2>
+    <p>Гра зберігає лише в своєму приватному сховищі на телефоні. Нам ці дані ніколи не надсилаються.</p>
+    <ul>
+      <li>Статистика: найкращий і останній рахунок, найкраща серія, кількість ігор, усього правильних відповідей.</li>
+      <li>Результат щоденного виклику за поточний день.</li>
+      <li>Налаштування: мова, звук, вібрація, режим для дальтоніків.</li>
+    </ul>
+    <p>Статистику можна скинути в Налаштування → Скинути статистику. Видалення гри видаляє всі ці дані.</p>
+
+    <h2>Реклама (Google AdMob)</h2>
+    <p>Гра показує лише рекламу за вибором гравця: відео, яке ви самі вирішуєте подивитися, щоб отримати додаткове життя. Банерів і спливаючої реклами немає. Рекламу надає Google AdMob, який автоматично збирає і передає такі дані для реклами, аналітики та захисту від шахрайства:</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Дані</th><th>Приклад</th></tr></thead>
+        <tbody>
+          <tr><td>Ідентифікатори пристрою</td><td>Рекламний ідентифікатор Android, app set ID</td></tr>
+          <tr><td>Приблизне місцезнаходження</td><td>Визначається за IP-адресою</td></tr>
+          <tr><td>Взаємодія з рекламою</td><td>Перегляди, натискання, перегляд відео до кінця</td></tr>
+          <tr><td>Діагностика</td><td>Дані про роботу застосунку та SDK</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Дані шифруються під час передавання. Докладніше: <a href="https://policies.google.com/privacy?hl=uk" target="_blank" rel="noopener">Політика конфіденційності Google</a> і <a href="https://policies.google.com/technologies/partner-sites?hl=uk" target="_blank" rel="noopener">Як Google використовує дані з застосунків партнерів</a>.</p>
+
+    <h2>Згода на персоналізовану рекламу</h2>
+    <p>Якщо ви перебуваєте в Європейській економічній зоні, Великій Британії чи Швейцарії, гра через форму згоди Google питає вашу згоду перед показом персоналізованої реклами. Якщо ви відмовитеся, Google може показувати неперсоналізовану рекламу. Змінити вибір можна будь-коли в грі: Налаштування → Конфіденційність реклами. Рекламний ідентифікатор можна скинути чи видалити в налаштуваннях Android (Налаштування → Конфіденційність → Реклама).</p>
+
+    <h2>Google Play Ігри</h2>
+    <p>Якщо функції Google Play Ігор (таблиці лідерів) доступні і ви входите в акаунт, Google обробляє ім'я та аватар вашого профілю Play Ігор і надіслані рахунки та показує їх у таблицях лідерів відповідно до налаштувань видимості профілю. Керувати профілем можна в застосунку Google Play Ігри. Ми не отримуємо вашу email-адресу чи контакти.</p>
+
+    <h2>Діти</h2>
+    <p>Гра не призначена для дітей до 13 років, і ми свідомо не збираємо їхніх даних.</p>
+
+    <h2>Зберігання і видалення</h2>
+    <p>Ми не зберігаємо ваших даних на своїх серверах, тож нам нічого видаляти. Дані на пристрої видаляються разом із грою. Даними, які обробляє Google, можна керувати в налаштуваннях акаунта Google або через інструменти Google за посиланнями вище.</p>
+
+    <h2>Ваші права</h2>
+    <p>Залежно від місця проживання (наприклад, згідно із Загальним регламентом ЄС про захист даних, GDPR) ви можете мати право на доступ до своїх персональних даних, їх виправлення, видалення чи обмеження обробки, а також відкликати згоду. Оскільки ми не зберігаємо ваших даних, такі запити виконуються через налаштування, описані вище, або безпосередньо в Google. Ви також можете подати скаргу до місцевого органу із захисту даних.</p>
+
+    <h2>Зміни політики</h2>
+    <p>Якщо політика зміниться, ми оновимо дату набрання чинності вгорі сторінки. Актуальна версія завжди доступна за цією адресою.</p>
+
+    <h2>Контакти</h2>
+    <div class="contact">
+      <span class="email" id="email-uk">marchuk951@gmail.com</span>
+      <button class="copy" type="button" id="copy-uk" data-target="email-uk" data-done="Скопійовано">Копіювати</button>
+    </div>
+  </section>
+</div>
+
+<script>
+document.querySelectorAll('button.copy').forEach(function (btn) {
+  var label = btn.textContent;
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.dataset.target);
+    var done = btn.dataset.done || 'Copied';
+    var show = function () { btn.textContent = done; setTimeout(function () { btn.textContent = label; }, 1800); };
+    var select = function () {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    };
+    try {
+      navigator.clipboard.writeText(el.textContent.trim()).then(show, select);
+    } catch (e) { select(); }
+  });
+});
+</script>
+</body>
+</html>
